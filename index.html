@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Press Start 2P font -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+    <!-- NES CSS -->
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.css">
+
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="./assets/img/pokedex.png" class="mr-2" alt="pokedex logo">
+        Pokedex
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="form-inline nes-field is-inline my-2 my-lg-0 ml-auto" id="buscar">
+          <input class="nes-input mr-sm-2" type="search" placeholder="Pokemon name..." aria-label="Search" id="buscarInput">
+          <button type="submit" class="nes-btn is-primary">Search</button>
+
+        </form>
+      </div>
+    </nav>
+    
+    <main class="container w-75">
+      <div class="row">
+        <h3 class="mx-auto text-center my-4 text-white">Select a pokemon to view its stats</h3>
+      </div>
+      <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3" id="pokemons">
+        
+      </section>
+      <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3" id="resultado">
+        
+      </section>
+      <section class="row" id="loader">
+        
+      </section>
+      <section class="row mb-5 mt-3 d-none" id="error">
+        <div class="col-5 d-flex flex-column justify-content-center align-items-center bg-white nes-container is-rounded mx-auto">
+          <img src="./assets/img/alert.png" alt="alert">
+          <h3 class="text-center">No pokemon found</h3>
+      </div>
+      </section>
+      <section class="row mb-4">
+        <button type="button" class="nes-btn is-primary w-100" id="cargar-pokemones">See more pokemon</button>
+        <button type="button" class="nes-btn w-100 d-none" id="regresar">Regresar</button>
+      </section>
+
+    </main>
+
+    <div class="mymodal nes-container" id="pokemon_modal">
+      <header class="modal-header">
+          <h4 class="modal-title text-white">Pokemon Stats: <span id="pokemon-name"></span></h4>
+          <button data-close-button class="close-button">&times;</button>
+      </header>
+      <main class="modal-body">
+        
+      </main>
+      <div class="modal-footer">
+      </div>
+    </div>
+    <div id="overlay"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/index.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  </body>
+</html>

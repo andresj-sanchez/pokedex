@@ -1,0 +1,1718 @@
+:root{
+    --bug: #A8B820;
+    --bug-dark: #8f9c1b;
+    --bug-shadow: #727c16;
+    --dark: #705848;
+    --dark-dark: #644836;
+    --dark-shadow: #412e23;
+    --dragon: #6a5acd;
+    --dragon-dark: #5747c2;
+    --dragon-shadow: #413591;
+    --electric: #f1ce40;
+    --electric-dark: #F8D030;
+    --electric-shadow: #ac9021;
+    --fairy: #EE99AC;
+    --fairy-dark: #e67f96;
+    --fairy-shadow: #b66476;
+    --fighting: #C03028;
+    --fighting-dark: #b42019;
+    --fighting-shadow: #861913;
+    --fire: #F08030;
+    --fire-dark: #e46f1b;
+    --fire-shadow: #b45815;
+    --flying: #A890F0;
+    --flying-dark: #9277e4;
+    --flying-shadow: #715cb1;
+    --ghost: #705898;
+    --ghost-dark: #5d4288;
+    --ghost-shadow: #3e2c5a;
+    --grass: #2ecc71;
+    --grass-dark: #1cbd5f;
+    --grass-shadow: #179c4f;
+    --ground: #E0C068;
+    --ground-dark: #d4b14f;
+    --ground-shadow: #9e843b;
+    --ice: #98D8D8;
+    --ice-dark: #7bcece;
+    --ice-shadow: #5c9b9b;
+    --normal: #A8A878;
+    --normal-dark: #99995f;
+    --normal-shadow: #64643e;
+    --poison: #9b59b6;
+    --poison-dark: #8b40a8;
+    --poison-shadow: #532664;
+    --psychic: #F85888;
+    --psychic-dark: #ee3f73;
+    --psychic-shadow: #bd325b;
+    --rock: #B8A038;
+    --rock-dark: #a89026;
+    --rock-shadow: #6d5d19;
+    --steel: #B8B8D0;
+    --steel-dark: #9898c2;
+    --steel-shadow: #727291;
+    --water: #6890F0;
+    --water-dark: #4d7ae4;
+    --water-shadow: #3b5dad;
+}
+
+body{
+    font-family: 'Press Start 2P', sans-serif;
+    background: #d63031;
+}
+
+.navbar-brand{
+    font-size: 2rem;
+}
+
+.navbar-brand img{
+    width: 4rem;
+}
+
+/****************
+* Card
+*/
+
+.title{
+    align-self: flex-start;
+}
+
+div.card img {
+    width: 11em;
+}
+
+.card-body{
+    padding: 0;
+}
+
+.card-title{
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+/*****************
+* Nes.css configurations
+*/
+
+
+
+.nes-input {
+    padding: .2rem 0;
+}
+
+.nes-btn{
+    padding: .2rem .5rem;
+    
+}
+
+.nes-badge{
+    width: 100%;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.card .nes-btn{
+    width: 100%;
+}
+
+.card-body .nes-badge, .card-body button {
+    color: #333335;
+}
+
+/******************
+* Modal
+*/
+
+.mymodal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    /* border-radius: 30px; */
+    z-index: 10;
+    background-color: white;
+}
+
+.mymodal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#pokemon_modal{
+    width: 70vw;
+}
+
+#error img{
+    width: 8rem;
+}
+
+#pokemon-name{
+    text-transform: capitalize;
+}
+
+.modal-title{
+    font-size: 1.7em;
+}
+
+.modal-header{
+    border-bottom: none;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+#pokemon_modal > .modal-body{
+    height: 70vh;
+    overflow-y: auto;
+    padding-top: 0;
+}
+
+#pokemon_modal > .modal-body .nes-container.with-title .nes-container.margin{
+    margin-right: 2rem;
+}
+
+#pokemon_modal > .modal-body .nes-container.with-title .nes-container img{
+    width: 10rem;
+}
+
+#pokemon_modal h6{
+    font-weight: bold;
+}
+
+#masculino{
+    background: #74b9ff;
+}
+
+#femenino{
+    background: #fd79a8;
+}
+
+hr{
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+
+  .hr-text {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    height: 1.5em;
+  }
+  .hr-text:before {
+    content: '';
+    background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#818078), to(transparent));
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  .hr-text:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+    padding: 0 .5em;
+    line-height: 1.5em;
+    color: black;
+    background-color: white;
+  }
+  
+
+.mymodal.nes-container {
+    padding: 0;
+}
+
+.modal-footer{
+    padding-top: 0;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/******************
+* Spinner
+*/
+
+.loader{
+    margin: 5rem auto!important;
+}
+
+.nes-pokeball{
+    animation: spin 1s linear infinite;
+}
+
+/* Spin Animation */
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+/**********************
+* Pokemon type colors
+*/
+
+/*
+* BUG
+*/
+
+.nes-btn.is-bug {
+    color: #fff;
+    background-color: var(--bug);
+}
+
+.nes-btn.is-bug:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--bug-dark);
+}
+
+.nes-btn.is-bug::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--bug-shadow);
+}
+
+.nes-btn.is-bug:hover::after {
+    box-shadow: inset -6px -6px var(--bug-shadow);
+}
+
+.nes-badge span.is-bug:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--bug-dark);
+    box-shadow: 0 0.5em var(--bug-dark), 0 -0.5em var(--bug-dark), 0.5em 0 var(--bug-dark), -0.5em 0 var(--bug-dark);
+}
+
+.nes-badge.is-splited span.is-bug:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--bug-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--bug-dark), 0 -0.5em var(--bug-dark), 0 0 var(--bug-dark), -0.5em 0 var(--bug-dark);
+}
+
+.nes-badge.is-splited span.is-bug:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--bug-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--bug-dark), 0 -0.5em var(--bug-dark), 0.5em 0 var(--bug-dark), 0 0 var(--bug-dark);
+}
+
+.modal-header.is-bug{
+    background: var(--bug);
+}
+
+.nes-table.is-bug {
+    color: #fff;
+    background-color: var(--bug);
+}
+
+thead.is-bug {
+    color: #fff;
+    background-color: var(--bug);
+}
+
+/*
+* DARK
+*/
+
+.nes-btn.is-dark {
+    color: #fff;
+    background-color: var(--dark);
+}
+
+.nes-btn.is-dark:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--dark-dark);
+}
+
+.nes-btn.is-dark::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--dark-shadow);
+}
+
+.nes-btn.is-dark:hover::after {
+    box-shadow: inset -6px -6px var(--dark-shadow);
+}
+
+.nes-badge span.is-dark:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--dark-dark);
+    box-shadow: 0 0.5em var(--dark-dark), 0 -0.5em var(--dark-dark), 0.5em 0 var(--dark-dark), -0.5em 0 var(--dark-dark);
+}
+
+.nes-badge.is-splited span.is-dark:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--dark-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--dark-dark), 0 -0.5em var(--dark-dark), 0 0 var(--dark-dark), -0.5em 0 var(--dark-dark);
+}
+
+.nes-badge.is-splited span.is-dark:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--dark-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--dark-dark), 0 -0.5em var(--dark-dark), 0.5em 0 var(--dark-dark), 0 0 var(--dark-dark);
+}
+
+.modal-header.is-dark{
+    background: var(--dark);
+}
+
+.nes-table.is-dark {
+    color: #fff;
+    background-color: var(--dark);
+}
+
+thead.is-dark {
+    color: #fff;
+    background-color: var(--dark);
+}
+
+/*
+* DRAGON
+*/
+
+.nes-btn.is-dragon {
+    color: #fff;
+    background-color: var(--dragon);
+}
+
+.nes-btn.is-dragon:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--dragon-dark);
+}
+
+.nes-btn.is-dragon::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--dragon-shadow);
+}
+
+.nes-btn.is-dragon:hover::after {
+    box-shadow: inset -6px -6px var(--dragon-shadow);
+}
+
+.nes-badge span.is-dragon:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--dragon-dark);
+    box-shadow: 0 0.5em var(--dragon-dark), 0 -0.5em var(--dragon-dark), 0.5em 0 var(--dragon-dark), -0.5em 0 var(--dragon-dark);
+}
+
+.nes-badge.is-splited span.is-dragon:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--dragon-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--dragon-dark), 0 -0.5em var(--dragon-dark), 0 0 var(--dragon-dark), -0.5em 0 var(--dragon-dark);
+}
+
+.nes-badge.is-splited span.is-dragon:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--dragon-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--dragon-dark), 0 -0.5em var(--dragon-dark), 0.5em 0 var(--dragon-dark), 0 0 var(--dragon-dark);
+}
+
+.modal-header.is-dragon{
+    background: var(--dragon);
+}
+
+.nes-table.is-dragon {
+    color: #fff;
+    background-color: var(--dragon);
+}
+
+thead.is-dragon {
+    color: #fff;
+    background-color: var(--dragon);
+}
+
+/*
+* ELECTRIC
+*/
+
+.nes-btn.is-electric {
+    color: #fff;
+    background-color: var(--electric);
+}
+
+.nes-btn.is-electric:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--electric-dark);
+}
+
+.nes-btn.is-electric::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--electric-shadow);
+}
+
+.nes-btn.is-electric:hover::after {
+    box-shadow: inset -6px -6px var(--electric-shadow);
+}
+
+.nes-badge span.is-electric:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--electric-dark);
+    box-shadow: 0 0.5em var(--electric-dark), 0 -0.5em var(--electric-dark), 0.5em 0 var(--electric-dark), -0.5em 0 var(--electric-dark);
+}
+
+.nes-badge.is-splited span.is-electric:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--electric-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--electric-dark), 0 -0.5em var(--electric-dark), 0 0 var(--electric-dark), -0.5em 0 var(--electric-dark);
+}
+
+.nes-badge.is-splited span.is-electric:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--electric-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--electric-dark), 0 -0.5em var(--electric-dark), 0.5em 0 var(--electric-dark), 0 0 var(--electric-dark);
+}
+
+.modal-header.is-electric{
+    background: var(--electric);
+}
+
+.nes-table.is-electric {
+    color: #fff;
+    background-color: var(--electric);
+}
+
+thead.is-electric {
+    color: #fff;
+    background-color: var(--electric);
+}
+
+/*
+* FAIRY
+*/
+
+.nes-btn.is-fairy {
+    color: #fff;
+    background-color: var(--fairy);
+}
+
+.nes-btn.is-fairy:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--fairy-dark);
+}
+
+.nes-btn.is-fairy::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--fairy-shadow);
+}
+
+.nes-btn.is-fairy:hover::after {
+    box-shadow: inset -6px -6px var(--fairy-shadow);
+}
+
+.nes-badge span.is-fairy:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--fairy-dark);
+    box-shadow: 0 0.5em var(--fairy-dark), 0 -0.5em var(--fairy-dark), 0.5em 0 var(--fairy-dark), -0.5em 0 var(--fairy-dark);
+}
+
+.nes-badge.is-splited span.is-fairy:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--fairy-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--fairy-dark), 0 -0.5em var(--fairy-dark), 0 0 var(--fairy-dark), -0.5em 0 var(--fairy-dark);
+}
+
+.nes-badge.is-splited span.is-fairy:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--fairy-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--fairy-dark), 0 -0.5em var(--fairy-dark), 0.5em 0 var(--fairy-dark), 0 0 var(--fairy-dark);
+}
+
+.modal-header.is-fairy{
+    background: var(--fairy);
+}
+
+.nes-table.is-fairy {
+    color: #fff;
+    background-color: var(--fairy);
+}
+
+thead.is-fairy {
+    color: #fff;
+    background-color: var(--fairy);
+}
+
+/*
+* FIGHTING
+*/
+
+.nes-btn.is-fighting {
+    color: #fff;
+    background-color: var(--fighting);
+}
+
+.nes-btn.is-fighting:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--fighting-dark);
+}
+
+.nes-btn.is-fighting::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--fighting-shadow);
+}
+
+.nes-btn.is-fighting:hover::after {
+    box-shadow: inset -6px -6px var(--fighting-shadow);
+}
+
+.nes-badge span.is-fighting:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--fighting-dark);
+    box-shadow: 0 0.5em var(--fighting-dark), 0 -0.5em var(--fighting-dark), 0.5em 0 var(--fighting-dark), -0.5em 0 var(--fighting-dark);
+}
+
+.nes-badge.is-splited span.is-fighting:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--fighting-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--fighting-dark), 0 -0.5em var(--fighting-dark), 0 0 var(--fighting-dark), -0.5em 0 var(--fighting-dark);
+}
+
+.nes-badge.is-splited span.is-fighting:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--fighting-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--fighting-dark), 0 -0.5em var(--fighting-dark), 0.5em 0 var(--fighting-dark), 0 0 var(--fighting-dark);
+}
+
+.modal-header.is-fighting{
+    background: var(--fighting);
+}
+
+.nes-table.is-fighting {
+    color: #fff;
+    background-color: var(--fighting);
+}
+
+thead.is-fighting {
+    color: #fff;
+    background-color: var(--fighting);
+}
+
+/*
+* FIRE
+*/
+
+.nes-btn.is-fire {
+    color: #fff;
+    background-color: var(--fire);
+}
+
+.nes-btn.is-fire:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--fire-dark);
+}
+
+.nes-btn.is-fire::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--fire-shadow);
+}
+
+.nes-btn.is-fire:hover::after {
+    box-shadow: inset -6px -6px var(--fire-shadow);
+}
+
+.nes-badge span.is-fire:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--fire-dark);
+    box-shadow: 0 0.5em var(--fire-dark), 0 -0.5em var(--fire-dark), 0.5em 0 var(--fire-dark), -0.5em 0 var(--fire-dark);
+}
+
+.nes-badge.is-splited span.is-fire:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--fire-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--fire-dark), 0 -0.5em var(--fire-dark), 0 0 var(--fire-dark), -0.5em 0 var(--fire-dark);
+}
+
+.nes-badge.is-splited span.is-fire:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--fire-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--fire-dark), 0 -0.5em var(--fire-dark), 0.5em 0 var(--fire-dark), 0 0 var(--fire-dark);
+}
+
+.modal-header.is-fire{
+    background: var(--fire);
+}
+
+.nes-table.is-fire {
+    color: #fff;
+    background-color: var(--fire);
+}
+
+thead.is-fire {
+    color: #fff;
+    background-color: var(--fire);
+}
+
+/*
+* FLYING
+*/
+
+.nes-btn.is-flying {
+    color: #fff;
+    background-color: var(--flying);
+}
+
+.nes-btn.is-flying:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--flying-dark);
+}
+
+.nes-btn.is-flying::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--flying-shadow);
+}
+
+.nes-btn.is-flying:hover::after {
+    box-shadow: inset -6px -6px var(--flying-shadow);
+}
+
+.nes-badge span.is-flying:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--flying-dark);
+    box-shadow: 0 0.5em var(--flying-dark), 0 -0.5em var(--flying-dark), 0.5em 0 var(--flying-dark), -0.5em 0 var(--flying-dark);
+}
+
+.nes-badge.is-splited span.is-flying:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--flying-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--flying-dark), 0 -0.5em var(--flying-dark), 0 0 var(--flying-dark), -0.5em 0 var(--flying-dark);
+}
+
+.nes-badge.is-splited span.is-flying:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--flying-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--flying-dark), 0 -0.5em var(--flying-dark), 0.5em 0 var(--flying-dark), 0 0 var(--flying-dark);
+}
+
+.modal-header.is-flying{
+    background: var(--flying);
+}
+
+.nes-table.is-flying {
+    color: #fff;
+    background-color: var(--flying);
+}
+
+thead.is-flying {
+    color: #fff;
+    background-color: var(--flying);
+}
+
+/*
+* GHOST
+*/
+
+.nes-btn.is-ghost {
+    color: #fff;
+    background-color: var(--ghost);
+}
+
+.nes-btn.is-ghost:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--ghost-dark);
+}
+
+.nes-btn.is-ghost::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--ghost-shadow);
+}
+
+.nes-btn.is-ghost:hover::after {
+    box-shadow: inset -6px -6px var(--ghost-shadow);
+}
+
+.nes-badge span.is-ghost:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--ghost-dark);
+    box-shadow: 0 0.5em var(--ghost-dark), 0 -0.5em var(--ghost-dark), 0.5em 0 var(--ghost-dark), -0.5em 0 var(--ghost-dark);
+}
+
+.nes-badge.is-splited span.is-ghost:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--ghost-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--ghost-dark), 0 -0.5em var(--ghost-dark), 0 0 var(--ghost-dark), -0.5em 0 var(--ghost-dark);
+}
+
+.nes-badge.is-splited span.is-ghost:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--ghost-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--ghost-dark), 0 -0.5em var(--ghost-dark), 0.5em 0 var(--ghost-dark), 0 0 var(--ghost-dark);
+}
+
+.modal-header.is-ghost{
+    background: var(--ghost);
+}
+
+.nes-table.is-ghost {
+    color: #fff;
+    background-color: var(--ghost);
+}
+
+thead.is-ghost {
+    color: #fff;
+    background-color: var(--ghost);
+}
+
+/*
+* GRASS
+*/
+
+.nes-btn.is-grass {
+    color: #fff;
+    background-color: var(--grass);
+}
+
+.nes-btn.is-grass:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--grass-dark);
+}
+
+.nes-btn.is-grass::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--grass-shadow);
+}
+
+.nes-btn.is-grass:hover::after {
+    box-shadow: inset -6px -6px var(--grass-shadow);
+}
+
+.nes-badge span.is-grass:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--grass-dark);
+    box-shadow: 0 0.5em var(--grass-dark), 0 -0.5em var(--grass-dark), 0.5em 0 var(--grass-dark), -0.5em 0 var(--grass-dark);
+}
+
+.nes-badge.is-splited span.is-grass:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--grass-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--grass-dark), 0 -0.5em var(--grass-dark), 0 0 var(--grass-dark), -0.5em 0 var(--grass-dark);
+}
+
+.nes-badge.is-splited span.is-grass:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--grass-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--grass-dark), 0 -0.5em var(--grass-dark), 0.5em 0 var(--grass-dark), 0 0 var(--grass-dark);
+}
+
+.modal-header.is-grass{
+    background: var(--grass);
+}
+
+.nes-table.is-grass {
+    color: #fff;
+    background-color: var(--grass);
+}
+
+thead.is-grass {
+    color: #fff;
+    background-color: var(--grass);
+}
+
+/*
+* GROUND
+*/
+
+.nes-btn.is-ground {
+    color: #fff;
+    background-color: var(--ground);
+}
+
+.nes-btn.is-ground:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--ground-dark);
+}
+
+.nes-btn.is-ground::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--ground-shadow);
+}
+
+.nes-btn.is-ground:hover::after {
+    box-shadow: inset -6px -6px var(--ground-shadow);
+}
+
+.nes-badge span.is-ground:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--ground-dark);
+    box-shadow: 0 0.5em var(--ground-dark), 0 -0.5em var(--ground-dark), 0.5em 0 var(--ground-dark), -0.5em 0 var(--ground-dark);
+}
+
+.nes-badge.is-splited span.is-ground:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--ground-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--ground-dark), 0 -0.5em var(--ground-dark), 0 0 var(--ground-dark), -0.5em 0 var(--ground-dark);
+}
+
+.nes-badge.is-splited span.is-ground:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--ground-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--ground-dark), 0 -0.5em var(--ground-dark), 0.5em 0 var(--ground-dark), 0 0 var(--ground-dark);
+}
+
+.modal-header.is-ground{
+    background: var(--ground);
+}
+
+.nes-table.is-ground {
+    color: #fff;
+    background-color: var(--ground);
+}
+
+thead.is-ground {
+    color: #fff;
+    background-color: var(--ground);
+}
+
+/*
+* ICE
+*/
+
+.nes-btn.is-ice {
+    color: #fff;
+    background-color: var(--ice);
+}
+
+.nes-btn.is-ice:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--ice-dark);
+}
+
+.nes-btn.is-ice::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--ice-shadow);
+}
+
+.nes-btn.is-ice:hover::after {
+    box-shadow: inset -6px -6px var(--ice-shadow);
+}
+
+.nes-badge span.is-ice:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--ice-dark);
+    box-shadow: 0 0.5em var(--ice-dark), 0 -0.5em var(--ice-dark), 0.5em 0 var(--ice-dark), -0.5em 0 var(--ice-dark);
+}
+
+.nes-badge.is-splited span.is-ice:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--ice-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--ice-dark), 0 -0.5em var(--ice-dark), 0 0 var(--ice-dark), -0.5em 0 var(--ice-dark);
+}
+
+.nes-badge.is-splited span.is-ice:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--ice-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--ice-dark), 0 -0.5em var(--ice-dark), 0.5em 0 var(--ice-dark), 0 0 var(--ice-dark);
+}
+
+.modal-header.is-ice{
+    background: var(--ice);
+}
+
+.nes-table.is-ice {
+    color: #fff;
+    background-color: var(--ice);
+}
+
+thead.is-ice {
+    color: #fff;
+    background-color: var(--ice);
+}
+
+/*
+* NORMAL
+*/
+
+.nes-btn.is-normal {
+    color: #fff;
+    background-color: var(--normal);
+}
+
+.nes-btn.is-normal:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--normal-dark);
+}
+
+.nes-btn.is-normal::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--normal-shadow);
+}
+
+.nes-btn.is-normal:hover::after {
+    box-shadow: inset -6px -6px var(--normal-shadow);
+}
+
+.nes-badge span.is-normal:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--normal-dark);
+    box-shadow: 0 0.5em var(--normal-dark), 0 -0.5em var(--normal-dark), 0.5em 0 var(--normal-dark), -0.5em 0 var(--normal-dark);
+}
+
+.nes-badge.is-splited span.is-normal:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--normal-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--normal-dark), 0 -0.5em var(--normal-dark), 0 0 var(--normal-dark), -0.5em 0 var(--normal-dark);
+}
+
+.nes-badge.is-splited span.is-normal:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--normal-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--normal-dark), 0 -0.5em var(--normal-dark), 0.5em 0 var(--normal-dark), 0 0 var(--normal-dark);
+}
+
+.modal-header.is-normal{
+    background: var(--normal);
+}
+
+.nes-table.is-normal {
+    color: #fff;
+    background-color: var(--normal);
+}
+
+thead.is-normal {
+    color: #fff;
+    background-color: var(--normal);
+}
+
+/*
+* POISON
+*/
+
+.nes-btn.is-poison {
+    color: #fff;
+    background-color: var(--poison);
+}
+
+.nes-btn.is-poison:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--poison-dark);
+}
+
+.nes-btn.is-poison::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--poison-shadow);
+}
+
+.nes-btn.is-poison:hover::after {
+    box-shadow: inset -6px -6px var(--poison-shadow);
+}
+
+.nes-badge span.is-poison:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--poison-dark);
+    box-shadow: 0 0.5em var(--poison-dark), 0 -0.5em var(--poison-dark), 0.5em 0 var(--poison-dark), -0.5em 0 var(--poison-dark);
+}
+
+.nes-badge.is-splited span.is-poison:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--poison-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--poison-dark), 0 -0.5em var(--poison-dark), 0 0 var(--poison-dark), -0.5em 0 var(--poison-dark);
+}
+
+.nes-badge.is-splited span.is-poison:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--poison-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--poison-dark), 0 -0.5em var(--poison-dark), 0.5em 0 var(--poison-dark), 0 0 var(--poison-dark);
+}
+
+.modal-header.is-poison{
+    background: var(--poison);
+}
+
+.nes-table.is-poison {
+    color: #fff;
+    background-color: var(--poison);
+}
+
+thead.is-poison {
+    color: #fff;
+    background-color: var(--poison);
+}
+
+/*
+* PSYCHIC
+*/
+
+.nes-btn.is-psychic {
+    color: #fff;
+    background-color: var(--psychic);
+}
+
+.nes-btn.is-psychic:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--psychic-dark);
+}
+
+.nes-btn.is-psychic::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--psychic-shadow);
+}
+
+.nes-btn.is-psychic:hover::after {
+    box-shadow: inset -6px -6px var(--psychic-shadow);
+}
+
+.nes-badge span.is-psychic:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--psychic-dark);
+    box-shadow: 0 0.5em var(--psychic-dark), 0 -0.5em var(--psychic-dark), 0.5em 0 var(--psychic-dark), -0.5em 0 var(--psychic-dark);
+}
+
+.nes-badge.is-splited span.is-psychic:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--psychic-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--psychic-dark), 0 -0.5em var(--psychic-dark), 0 0 var(--psychic-dark), -0.5em 0 var(--psychic-dark);
+}
+
+.nes-badge.is-splited span.is-psychic:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--psychic-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--psychic-dark), 0 -0.5em var(--psychic-dark), 0.5em 0 var(--psychic-dark), 0 0 var(--psychic-dark);
+}
+
+.modal-header.is-psychic{
+    background: var(--psychic);
+}
+
+.nes-table.is-psychic {
+    color: #fff;
+    background-color: var(--psychic);
+}
+
+thead.is-psychic {
+    color: #fff;
+    background-color: var(--psychic);
+}
+
+/*
+* ROCK
+*/
+
+.nes-btn.is-rock {
+    color: #fff;
+    background-color: var(--rock);
+}
+
+.nes-btn.is-rock:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--rock-dark);
+}
+
+.nes-btn.is-rock::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--rock-shadow);
+}
+
+.nes-btn.is-rock:hover::after {
+    box-shadow: inset -6px -6px var(--rock-shadow);
+}
+
+.nes-badge span.is-rock:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--rock-dark);
+    box-shadow: 0 0.5em var(--rock-dark), 0 -0.5em var(--rock-dark), 0.5em 0 var(--rock-dark), -0.5em 0 var(--rock-dark);
+}
+
+.nes-badge.is-splited span.is-rock:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--rock-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--rock-dark), 0 -0.5em var(--rock-dark), 0 0 var(--rock-dark), -0.5em 0 var(--rock-dark);
+}
+
+.nes-badge.is-splited span.is-rock:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--rock-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--rock-dark), 0 -0.5em var(--rock-dark), 0.5em 0 var(--rock-dark), 0 0 var(--rock-dark);
+}
+
+.modal-header.is-rock{
+    background: var(--rock);
+}
+
+.nes-table.is-rock {
+    color: #fff;
+    background-color: var(--rock);
+}
+
+thead.is-rock {
+    color: #fff;
+    background-color: var(--rock);
+}
+
+/*
+* STEEL
+*/
+
+.nes-btn.is-steel {
+    color: #fff;
+    background-color: var(--steel);
+}
+
+.nes-btn.is-steel:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--steel-dark);
+}
+
+.nes-btn.is-steel::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--steel-shadow);
+}
+
+.nes-btn.is-steel:hover::after {
+    box-shadow: inset -6px -6px var(--steel-shadow);
+}
+
+.nes-badge span.is-steel:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--steel-dark);
+    box-shadow: 0 0.5em var(--steel-dark), 0 -0.5em var(--steel-dark), 0.5em 0 var(--steel-dark), -0.5em 0 var(--steel-dark);
+}
+
+.nes-badge.is-splited span.is-steel:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--steel-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--steel-dark), 0 -0.5em var(--steel-dark), 0 0 var(--steel-dark), -0.5em 0 var(--steel-dark);
+}
+
+.nes-badge.is-splited span.is-steel:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--steel-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--steel-dark), 0 -0.5em var(--steel-dark), 0.5em 0 var(--steel-dark), 0 0 var(--steel-dark);
+}
+
+.modal-header.is-steel{
+    background: var(--steel);
+}
+
+.nes-table.is-steel {
+    color: #fff;
+    background-color: var(--steel);
+}
+
+thead.is-steel {
+    color: #fff;
+    background-color: var(--steel);
+}
+
+/*
+* WATER
+*/
+
+.nes-btn.is-water {
+    color: #fff;
+    background-color: var(--water);
+}
+
+.nes-btn.is-water:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--water-dark);
+}
+
+.nes-btn.is-water::after {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: "";
+    box-shadow: inset -4px -4px var(--water-shadow);
+}
+
+.nes-btn.is-water:hover::after {
+    box-shadow: inset -6px -6px var(--water-shadow);
+}
+
+.nes-badge span.is-water:first-child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--water-dark);
+    box-shadow: 0 0.5em var(--water-dark), 0 -0.5em var(--water-dark), 0.5em 0 var(--water-dark), -0.5em 0 var(--water-dark);
+}
+
+.nes-badge.is-splited span.is-water:first-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--water-dark);
+    left: 0;
+    box-shadow: 0 0.5em var(--water-dark), 0 -0.5em var(--water-dark), 0 0 var(--water-dark), -0.5em 0 var(--water-dark);
+}
+
+.nes-badge.is-splited span.is-water:last-child {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: var(--water-dark);
+    right: 0;
+    box-shadow: 0 0.5em var(--water-dark), 0 -0.5em var(--water-dark), 0.5em 0 var(--water-dark), 0 0 var(--water-dark);
+}
+
+.modal-header.is-water{
+    background: var(--water);
+}
+
+.nes-table.is-water {
+    color: #fff;
+    background-color: var(--water);
+}
+
+thead.is-water {
+    color: #fff;
+    background-color: var(--water);
+}
+
+/***********
+* fix bootstrap courser pointer
+*/
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
+}
+
+/**********
+* fix button size in small devices
+*/
+
+@media screen and (max-width: 768px){
+    .navbar-brand{
+        font-size: 1.2rem;
+    }
+    .navbar-brand img{
+        width: 3rem;
+    }
+    main > div > h3 {
+        font-size: 1rem;
+    }
+    .nes-badge{
+        font-size: .6rem;
+    }
+    #pokemon_modal .nes-badge{
+        font-size: 1rem;
+    }
+    #pokemon_modal{
+        width: 100vw;
+        height: 100vh;
+    }
+    #pokemon_modal > .modal-body .nes-container.with-title .nes-container img{
+        width: 14rem;
+    }
+    #pokemon_modal > .modal-body .nes-container.with-title .nes-container.margin{
+        margin-bottom: 2rem;
+        margin-right: 0;
+    }
+    #pokemon_modal > .modal-body div div.nes-table-responsive .nes-table.margin{
+        margin-bottom: 2rem;
+    }
+    .modal-header{
+        height: 20vh
+    }
+    #pokemon_modal > .modal-body{
+        height: 60vh;
+    }
+    hr{
+        font-size: 1.2rem;
+        margin: 2rem 0;
+    }
+    .modal-footer{
+        height: 20vh;
+    }
+    .nes-field.is-inline .nes-btn {
+        display: block;
+        width: 100%;
+        max-width: 99%;
+        margin-top: 2%;
+    }
+    .modal-footer > .nes-btn {
+        display: block;
+        width: 100%;
+        max-width: 99%;
+        margin-top: 2%;
+    }
+    .loader h3{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 736px){
+    
+    .modal-title{
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 400px){
+    
+    .modal-title{
+        font-size: 1.4em;
+    }
+}
