@@ -141,6 +141,10 @@ div.card img {
     width: 70vw;
 }
 
+#pokemon_modal .nes-badge{
+    font-size: 1.2rem;
+}
+
 #error img{
     width: 8rem;
 }
