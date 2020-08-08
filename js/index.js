@@ -5,7 +5,7 @@ const pokedexModel = (() => {
             this.id = id;
             this.name = name;
             this.types = types.map(type => type.type.name);
-            this.sprites = sprites;
+            this.sprites = changeStaticSpritesToAnimatedSprites(name, sprites);
             this.front_image = sprites.front_default;
             this.heightDm = height;
             this.heightMetres = formatNumber(height * 0.1);
@@ -15,27 +15,25 @@ const pokedexModel = (() => {
             this.weightLb = formatNumber(weight / 4.536);
             this.moves = moves.map(move => move.move.name);
         }
-
-        setAnimatedSprites(){
-            const name = this.name;
-            const sprites = this.sprites;
-            const animatedSprites = {
-                back_default: createAnimatedSpriteUrl(name, sprites.back_default, 'back-normal', ''),
-                back_female: createAnimatedSpriteUrl(name, sprites.back_female, 'back-normal', '-f'),
-                back_shiny: createAnimatedSpriteUrl(name, sprites.back_shiny, 'back-shiny', ''),
-                back_shiny_female: createAnimatedSpriteUrl(name, sprites.back_shiny_female, 'back-shiny', '-f'),
-                front_default: createAnimatedSpriteUrl(name, sprites.front_default, 'normal', ''),
-                front_female: createAnimatedSpriteUrl(name, sprites.front_female, 'normal', '-f'),
-                front_shiny: createAnimatedSpriteUrl(name, sprites.front_shiny, 'shiny', ''),
-                front_shiny_female: createAnimatedSpriteUrl(name, sprites.front_shiny_female, 'shiny', '-f')
-            }
-            this.sprites = animatedSprites;
-        }
     };
 
     function formatNumber(num){
         return Math.round( ( num + Number.EPSILON ) * 100 ) / 100;
-    } 
+    }
+
+    function changeStaticSpritesToAnimatedSprites(name, sprites){
+        const animatedSprites = {
+            back_default: createAnimatedSpriteUrl(name, sprites.back_default, 'back-normal', ''),
+            back_female: createAnimatedSpriteUrl(name, sprites.back_female, 'back-normal', '-f'),
+            back_shiny: createAnimatedSpriteUrl(name, sprites.back_shiny, 'back-shiny', ''),
+            back_shiny_female: createAnimatedSpriteUrl(name, sprites.back_shiny_female, 'back-shiny', '-f'),
+            front_default: createAnimatedSpriteUrl(name, sprites.front_default, 'normal', ''),
+            front_female: createAnimatedSpriteUrl(name, sprites.front_female, 'normal', '-f'),
+            front_shiny: createAnimatedSpriteUrl(name, sprites.front_shiny, 'shiny', ''),
+            front_shiny_female: createAnimatedSpriteUrl(name, sprites.front_shiny_female, 'shiny', '-f')
+        }
+        return animatedSprites;
+    }
 
     function createAnimatedSpriteUrl(pokemonName, spriteExists, spriteType, pokemonGenre){
         const url = 'https://img.pokemondb.net/sprites/black-white/anim/';
@@ -66,7 +64,6 @@ const pokedexModel = (() => {
             console.log({data});
             data.forEach(pokemon => {
                 const pokemonObj = new Pokemon(pokemon.id, pokemon.name, pokemon.types, pokemon.sprites, pokemon.height, pokemon.weight, pokemon.moves);
-                pokemonObj.setAnimatedSprites();
                 this.pokemonsArray.push(pokemonObj);
             });
             console.log(this.pokemonsArray);
